@@ -1,0 +1,50 @@
+*{
+	background-color: lightblue;
+}
+
+/*Header: Logo bovenaan de pagina*/
+
+.logo > img{
+	width:127px;
+	height: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top:3px;
+}
+
+
+.map-box{
+	display:flex;
+	justify-content:center;
+}
+
+#map {
+  height: 50vh;
+  width: 50vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Ipad css
+@media only screen and (min-width: 768px){
+} */
+
+
+/*Laptop css 
+@media only screen and (min-width: 1024px){
+}*/
+
+
+/*Desktop css
+@media only screen and (min-width: 1440px){
+} */
