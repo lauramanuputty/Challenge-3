@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> 
+<html lang="nl"> 
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,56 @@
 			  <figcaption></figcaption>
 			</figure>
 		</header> 
+		
+		<section class="intro"> 
+			<h2>WELKOM</h2>
+			<h5>BIJ SPACEX LANDING! </h5> 
+			<p id="content">Beste Marsbewoners, welkom bij SpaceX Landing. Onderin de pagina bevind zich de live landingskaart,
+				met landingsplaatsen en weerbeschrijvingen. Hiermee willen we u helpen 
+				zo veilig mogelijk te kunnen landen op het aardoppervlak.  Fijne reis!</p>
+		</section>
+		
+		<section class="reis">
+			<div class="planeten">
+				<figure class="mars">
+				  <img src="images/mars.png" alt="plaatje van planeet Mars">
+				  <figcaption></figcaption>
+				</figure>
+			
+				<figure class="raket">
+				  <img src="images/raket.png" alt="plaatje van planeet Mars">					  
+				  <figcaption></figcaption>
+				</figure>
+				
+				<figure class="aarde">
+				  <img src="images/aarde.png" alt="plaatje van planeet Mars">
+				  <figcaption></figcaption>
+				</figure>
+			</div>
+		</section>
+		
+		<section class="open-weather">
+			<h2>HET WEER</h2>
+			<div class="zoek-weer">
+				<input type="text" autocomplete="off" class="zoek-box-weer" placeholder="Zoek naar een stad...">
+			</div>
+			
+			<div class="main">
+				<section class="locatie">
+					<div class="stad">Stad, Land</div>
+					<div class="datum">Dag Maand Jaar</div>
+				</section>
+				
+				<section class="huidig">
+					<div class="temp"><span>°c</span></div>
+					<div class="weer">Weer</div>
+					<div class="hoog-laag">°c / °c</div>
+				</section>
+			</div> 
+		</section>
+		
 		<section class="map-box">
+			<h2>LANDING</h2>
 			<div id="map"></div>
 		</section>
 	</body>

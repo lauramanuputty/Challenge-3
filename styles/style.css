@@ -1,28 +1,194 @@
-*{
-	background-color: lightblue;
+/*Mobile first*/ 
+/*width: 375*/ 
+body{
+	background-color:#09203A;
+	font-family: century gothic, tahoma, sans-serif;
+	color: white;
+	margin:0;
+	padding:0;
 }
 
 /*Header: Logo bovenaan de pagina*/
 
+.spacelogo{
+	position: relative; 
+	width: 100%;
+	height: 50vh;
+	display: flex;
+	justify-content:center;
+	align-items: center; 
+	overflow:hidden;
+}
+
+.spacelogo:before{
+	content:'';
+	position: absolute; 
+	top:0;
+	left:0;
+	width:100%;
+	height: 100%;
+	background: linear-gradient(40deg,#42cef5,#6827b0);
+	border-radius: 0 0 50% 50%/0 0 100% 100%;
+	transform: scaleX(1,5);
+}
+
+.spacelogo .logo{
+	position: relative; 
+	z-index: 1; 
+	margin: 0 auto; 
+	max-width: 900px;
+	text-align:center;
+}
+
 .logo > img{
-	width:127px;
-	height: 20px;
-	display: block;
+	width:190px;
+	height: 30px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top:3px;
+	margin-top: -25px;
 }
 
 
+/*section-one: intro met een korte inleiding van de pagina*/
+.intro{
+	text-align: center;
+}
+
+#content{
+	width:280px;
+	font-size: 14px;
+	margin-bottom: 50px;
+	margin-left:auto;
+	margin-right: auto;
+}
+
+
+/*section-two: planeten en raket image*/
+.reis{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+
+.planeten{
+	background: linear-gradient(40deg,#42cef5,#6827b0,#000);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+	border: 0.3px solid black;
+}
+
+.mars>img{
+	width: 40px;
+	height: 40px;
+	margin-left: 15px;
+}
+
+.raket>img{
+	width: 40px;
+	height: 40px;
+	margin-left: 50px;
+	margin-top:-3px
+}	
+
+.aarde>img{
+	width: 65px;
+	height: 65px;
+	margin-left: 40px;
+	margin-top: -15px;
+}
+
+h2{
+	text-align: center;
+}
+
+
+/*section-three: open-weather, het weer*/
+.open-weather{
+	background-color:#8a64b5;
+	display: flex;
+	flex-direction: column; 
+	min-height: 100vh;
+	margin-top:75px;
+	margin-bottom: 30px;
+	padding:50px 0px;
+}
+
+.zoek-weer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding:5px 15px 15px;
+}
+
+.zoek-weer input{
+	width: 100%;
+	max-width: 240px;
+	padding: 10px 25px;
+	border-radius: 15px 0px 15px 0px;
+	border: none;
+	border-bottom: 4px solid #000;
+	outline: none;
+	color: #313131;
+	font-size: 14px;
+}
+
+.main{
+	flex: 1 1 100%;
+	padding: 15px 15px 0px;
+	display:flex; 
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.locatie .stad{
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom:5px;
+}
+
+.locatie .datum{
+	font-size:15px;
+}
+
+.huidig .temp{
+	font-size: 80px;
+	font-weight:bold;
+	margin: 25px 0px;
+	text-shadow: 2px 5px #000;
+}
+
+.huidig .temp span{
+	font-weight:normal;
+}
+
+.huidig .weer{
+	font-size: 20px;
+	font-style: italic;
+	font-weight: bold;
+}
+.huidig .hoog-laag{
+	font-size: 15px;
+	margin-bottom: 15px;
+	margin-top: 8px;
+}
+
+/*section-four: mapbox, map*/
 .map-box{
 	display:flex;
+	flex-direction:column;
 	justify-content:center;
+	margin-bottom: 70px;
 }
 
+
 #map {
-  height: 50vh;
-  width: 50vw;
+  height: 80vh;
+  width: 80vw;
+  margin: auto auto;
 }
+
 
 
 
