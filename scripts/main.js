@@ -39,6 +39,9 @@ function displayResultaten(weather){
 
 	let hoog_laag = document.querySelector('.huidig .hoog-laag');
 	hoog_laag.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
+	
+	let wind = document.querySelector('.huidig .data-wind');
+	wind.innerText = `Windkracht  ${weather.wind.speed}`;
 }
 
 function dataBuilder(d){
@@ -54,18 +57,15 @@ function dataBuilder(d){
 }
  
  
-//Mapbox 
-
+//Mapbox map 
 mapboxgl.accessToken = 'pk.eyJ1IjoiMTgwOTc2NzciLCJhIjoiY2s4azUwdTc2MGVzbzNvbXRmNXUxb3VhOCJ9.O18hLR1byTIf1kY3xf919g';
 
 var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/18097677/ck8yd4pbd0ib81jnoku6f1pss',
-  center: [10, 50],
-  zoom: 1.5,
+  center: [20, 50],
+  zoom: 2.5,
 });
-
-map.addControl(new mapboxgl.NavigationControl());
 
 /*var popup = new mapboxgl.Popup().setHTML('<h4>Landingsplaats</h4> <p>Dit is een beschrikbare landingsplaats!  De coordinaten zijn [35.029520, 48.464860]</p>');
 
@@ -73,8 +73,8 @@ var marker = new mapboxgl.Marker()
 	   .setLngLat([35.029520, 48.464860])
 	   .setPopup(popup)
 	   .addTo(map);*/
-
-	   
+   
+//marker 
 var geojson = {
   type: 'FeatureCollection',
   features: [{
@@ -90,17 +90,24 @@ var geojson = {
   }]
 };
 
+//marker en popup
 geojson.features.forEach(function(marker) {
-
-  // create a HTML element for each feature
   var el = document.createElement('div');
   el.className = 'marker';
 
-  // make a marker for each feature and add to the map
   new mapboxgl.Marker(el)
     .setLngLat(marker.geometry.coordinates)
-	 .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-    .setHTML('<h4>Landingsplaats</h4> <p>Dit is een beschrikbare landingsplaats!  De coordinaten zijn [35.029520, 48.464860]</p>'))
+	 .setPopup(new mapboxgl.Popup({ offset: 25 })
+    .setHTML('<h4>Landingsplaats</h4> <p>Dit is een beschikbare landingsplaats!  De coordinaten zijn [35.029520, 48.464860]</p>'))
     .addTo(map);
 });
 
+//zoekbalk
+map.addControl(
+  new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    mapboxgl: mapboxgl
+  })
+);
+
+map.addControl(new mapboxgl.NavigationControl());
