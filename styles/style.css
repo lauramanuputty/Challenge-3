@@ -9,8 +9,8 @@ body{
 	border-bottom: 15px solid #000;
 }
 
-/*Header: Logo bovenaan de pagina*/
 
+/*Header: Logo bovenaan de pagina*/
 .spacelogo{
 	position: relative; 
 	width: 100%;
@@ -30,7 +30,7 @@ body{
 	height: 100%;
 	background: linear-gradient(40deg,#42cef5,#6827b0);
 	border-radius: 0 0 50% 50%/0 0 100% 100%;
-	transform: scaleX(1,5);
+	transform: scaleX(1.1);
 }
 
 .spacelogo .logo{
@@ -81,6 +81,7 @@ hr{
 	margin-right: auto;
 	margin-left: auto;
 }
+
 
 /*section-two: planeten en raket image*/
 .reis{

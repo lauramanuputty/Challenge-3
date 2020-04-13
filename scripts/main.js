@@ -1,10 +1,10 @@
 //Open Weather
- const api = {
+ var api = {
 	 key: "a802a5a2c7629e3831353aabfc22371b",
 	 url: "https://api.openweathermap.org/data/2.5/weather?q="
  }
  
-const zoekbox = document.querySelector('.zoek-box-weer');
+var zoekbox = document.querySelector('.zoek-box-weer');
 zoekbox/addEventListener('keypress', setQuery);
 
 
@@ -17,7 +17,7 @@ function setQuery(evt){
  
 function getResultaten(query){
 	fetch('https://api.openweathermap.org/data/2.5/weather?q=' + zoekbox.value + '&units=metric&appid=' + 'a802a5a2c7629e3831353aabfc22371b')  
-		.then(weather=> {
+		.then(weather => {
 			return weather.json();
 		}).then(displayResultaten);
 }
