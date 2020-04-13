@@ -37,8 +37,8 @@ function displayResultaten(weather){
 	let huidige_weer = document.querySelector('.huidig .weer');
 	huidige_weer.innerText = weather.weather[0].main;
 
-	let hoog_laag = document.querySelector('.huidig .hoog_laag');
-	hoog_laag.innerText = `${weather.main.temp_min}°c / ${weather.main.temp_max}°c`;
+	let hoog_laag = document.querySelector('.huidig .hoog-laag');
+	hoog_laag.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
 }
 
 function dataBuilder(d){
@@ -59,7 +59,9 @@ function dataBuilder(d){
 mapboxgl.accessToken = 'pk.eyJ1IjoiMTgwOTc2NzciLCJhIjoiY2s4azUwdTc2MGVzbzNvbXRmNXUxb3VhOCJ9.O18hLR1byTIf1kY3xf919g';
 var map = new mapboxgl.Map({
   container: 'map',
-  style: 'mapbox://styles/mapbox/streets-v10',
+  style: 'mapbox://styles/mapbox/dark-v10',
   center: [10, 50],
   zoom: 1.5,
 });
+
+
