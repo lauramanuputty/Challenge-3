@@ -57,11 +57,50 @@ function dataBuilder(d){
 //Mapbox 
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiMTgwOTc2NzciLCJhIjoiY2s4azUwdTc2MGVzbzNvbXRmNXUxb3VhOCJ9.O18hLR1byTIf1kY3xf919g';
+
 var map = new mapboxgl.Map({
   container: 'map',
-  style: 'mapbox://styles/mapbox/dark-v10',
+  style: 'mapbox://styles/18097677/ck8yd4pbd0ib81jnoku6f1pss',
   center: [10, 50],
   zoom: 1.5,
 });
 
+map.addControl(new mapboxgl.NavigationControl());
+
+/*var popup = new mapboxgl.Popup().setHTML('<h4>Landingsplaats</h4> <p>Dit is een beschrikbare landingsplaats!  De coordinaten zijn [35.029520, 48.464860]</p>');
+
+var marker = new mapboxgl.Marker()
+	   .setLngLat([35.029520, 48.464860])
+	   .setPopup(popup)
+	   .addTo(map);*/
+
+	   
+var geojson = {
+  type: 'FeatureCollection',
+  features: [{
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [35.029520, 48.464860]
+    },
+    properties: {
+      title: 'Mapbox',
+      description: 'Oekraïne, Dnipro'
+    }
+  }]
+};
+
+geojson.features.forEach(function(marker) {
+
+  // create a HTML element for each feature
+  var el = document.createElement('div');
+  el.className = 'marker';
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el)
+    .setLngLat(marker.geometry.coordinates)
+	 .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+    .setHTML('<h4>Landingsplaats</h4> <p>Dit is een beschrikbare landingsplaats!  De coordinaten zijn [35.029520, 48.464860]</p>'))
+    .addTo(map);
+});
 

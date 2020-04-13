@@ -189,16 +189,35 @@ h2{
 	margin-bottom: 70px;
 }
 
-
 #map {
-  height: 80vh;
-  width: 80vw;
+  height: 150vh;
+  width: 77%;
   margin: auto auto;
 }
 
+.marker {
+  background-image: url('../images/icoon.png');
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
+.mapboxgl-popup{
+	width: 60%;
+}
 
+.mapboxgl-popup-content {
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+}
 
+.mapboxgl-popup-close-button {
+  font-size: 20px;
+  color: #000;
+}
 
 
 
