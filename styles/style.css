@@ -137,7 +137,6 @@ hr{
 	background-color:#8a64b5;
 	display: flex;
 	flex-direction: column;
-	height: 110vh;
 	margin-top:75px;
 	margin-bottom: 10px;
 }
