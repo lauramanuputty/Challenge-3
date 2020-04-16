@@ -1,5 +1,7 @@
 # Challenge-3 Procesbeschrijving 
 
+https://lauramanuputty.github.io/Challenge-3/
+
 Het was voor mij een lastige opdracht, vooral in het begin. Maar ik heb uiteindelijk wel twee API's kunnen toevoegen aan mijn javascriptcode.  De twee API's die ik heb gebruikt voor de challenge waren Openweather en Mapbox. 
 
 Ik heb op de dashboard als eerst het logo gezet en daarna een korte introductie. Onder de introductie heb ik voor de opmaak een aantal icoontjes samengevoegd die ik ook in challenge 2 had gebruikt. Bij het raket icon heb ik ook een kleine animatie toegevoegd. 
